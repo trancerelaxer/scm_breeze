@@ -116,7 +116,7 @@ if [ "$shell_ls_aliases_enabled" = "true" ] && builtin command -v ruby > /dev/nu
     local ll_output
     local ll_command  # Ensure sort ordering of the two invocations is the same
     if [ "$_ls_bsd" != "BSD" ]; then
-      ll_command=(\ls -hv --group-directories-first)
+      ll_command=(\ls -hv)
       ll_output="$("${ll_command[@]}" -l --color "$@")"
     else
       ll_command=(\ls)
